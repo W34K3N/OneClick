@@ -1,0 +1,94 @@
+name: Ошибка
+description: Что-то сломалось — падение, зависание, «поставилось не то», конфиг не вернулся
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо, что пишете. Чем точнее данные — тем быстрее найдётся причина.
+        Если это вопрос «а как работает…», лучше в
+        [Discussions](https://github.com/W34K3N/OneClick/discussions).
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия OneClick
+      description: Подпись внизу сайдбара («версия 1.0») или имя скачанного файла релиза.
+      placeholder: "1.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Где сломалось
+      options:
+        - Сканирование ПК (список приложений)
+        - Сборка Bundle (скачивание установщиков и настроек)
+        - Восстановление (установка и возврат настроек)
+        - Интерфейс, вёрстка, окна
+        - Другое
+    validations:
+      required: true
+
+  - type: input
+    id: app
+    attributes:
+      label: Приложение
+      description: Если проблема в конкретной программе — название и версия.
+      placeholder: "Zen Browser 1.0.2"
+
+  - type: dropdown
+    id: installer
+    attributes:
+      label: Тип установщика
+      description: Виден в колонке «Установщик» или в `bundle.json` (поле `kind`).
+      options:
+        - NSIS
+        - Inno Setup
+        - MSI
+        - MSIX / APPX
+        - 7-Zip SFX
+        - InstallShield
+        - Squirrel
+        - portable-папка
+        - zip / архив
+        - скрипт (.ps1 / .bat / .cmd / .reg)
+        - не знаю
+
+  - type: textarea
+    id: what
+    attributes:
+      label: Что произошло
+      description: Что нажимали, что ожидали увидеть и что увидели на самом деле.
+      placeholder: |
+        1. Нажал «ЭТО НОВАЯ WINDOWS»
+        2. На пункте «Zen Browser» появилось «! ошибка распаковки»
+        3. Ожидал тихую установку
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: Лог
+      description: |
+        Последние 30–50 строк из `Bundle\logs\run-ГГГГММДД-ЧЧММСС.log`.
+        Важны строки с `!` (ошибка) и `—` (пропущено).
+        **Уберите свои пути, логины и прочее личное** — репозиторий публичный.
+      render: text
+
+  - type: input
+    id: os
+    attributes:
+      label: Система
+      placeholder: "Windows 11 24H2 x64, 150 % DPI"
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Проверки
+      options:
+        - label: Версия последняя (взята из раздела Releases), а не старая сборка
+        - label: В логе нет моих личных данных (путей, логинов)

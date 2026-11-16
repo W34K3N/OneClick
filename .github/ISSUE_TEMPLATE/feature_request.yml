@@ -1,0 +1,45 @@
+name: Идея
+description: Чего не хватает — программа, тип установщика, настройка, поведение
+title: "[idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Идеи тоже можно писать в
+        [Discussions → Ideas](https://github.com/W34K3N/OneClick/discussions/categories/ideas),
+        если хочется сначала обсудить. Здесь — если уже понятно, что нужно сделать.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Что не работает или чего не хватает
+      description: Опишите ситуацию, а не готовое решение.
+      placeholder: "Переношу ПК с двумя профилями. Настройки второго профиля не находятся, потому что сканируется только текущий пользователь."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Как это могло бы выглядеть
+      description: Необязательно. Если есть идея по интерфейсу или манифесту — опишите.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Что это затрагивает
+      options:
+        - Сканирование приложений
+        - Поиск настроек и конфиги
+        - Типы установщиков
+        - Интерфейс
+        - Журналы и отчёты
+        - Другое
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Проверки
+      options:
+        - label: Поискал в Issues и Discussions — похожего нет

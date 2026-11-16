@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Вопрос по работе программы
+    url: https://github.com/W34K3N/OneClick/discussions/categories/q-a
+    about: «А как оно переносит…», «почему так…» — сюда. Вопросы не закрываются и не висят в списке багов.
+  - name: Идея или пожелание
+    url: https://github.com/W34K3N/OneClick/discussions/categories/ideas
+    about: Свободное обсуждение идей до того, как они станут задачей.
+  - name: Показать, что получилось
+    url: https://github.com/W34K3N/OneClick/discussions/categories/show-and-tell
+    about: Перенесли систему — расскажите, сколько приложений и что сломалось.
+  - name: Скачать последнюю версию
+    url: https://github.com/W34K3N/OneClick/releases/latest
+    about: exe, конфиг, сертификат и установщик сертификата — в разделе Releases.
