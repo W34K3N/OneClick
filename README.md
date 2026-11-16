@@ -1,11 +1,31 @@
 ﻿![OneClick](docs/banner.png)
 
+<p align="center">
+  <a href="https://github.com/W34K3N/OneClick/releases/latest"><img alt="version" src="https://img.shields.io/badge/version-1.0-6C5CE7"></a>
+  <img alt="license" src="https://img.shields.io/badge/license-MIT-blue">
+  <img alt="platform" src="https://img.shields.io/badge/platform-Windows_10_%7C_11-0078D6">
+  <img alt=".NET" src="https://img.shields.io/badge/.NET_Framework-4.8-512BD4">
+</p>
+
 # OneClick 1.0
 
 Инструмент для переноса приложений и их настроек на чистую Windows.
 
 Идея простая: программа сама находит приложения на текущем ПК, складывает их установщики и
 конфиги в папку `Bundle`, а на новой системе ставит всё обратно и возвращает настройки.
+
+**[Скачать OneClick 1.0](https://github.com/W34K3N/OneClick/releases/latest)** — `OneClick.exe`,
+`OneClick.exe.config`, сертификат и `install-cert.cmd`.
+
+## Скриншоты
+
+| Стартовый экран | Панель управления |
+|---|---|
+| [![](docs/shot-start.png)](docs/shot-start.png) | [![](docs/shot-dashboard.png)](docs/shot-dashboard.png) |
+
+Слева — выбор режима: собрать `Bundle` на текущей системе или развернуть его на новой.
+Справа — список приложений: чем скачан установщик, на каком этапе ставится и какие настройки
+для него сохранены. Прогресс сборки и журнал обновляются на ходу.
 
 ## Что нужно
 
@@ -108,3 +128,9 @@ install-cert.cmd
 Каждый запуск пишет `Bundle\logs\run-ГГГГММДД-ЧЧММСС.log`. Строки:
 
 - `+` установлено/сохранено, `=` уже стояло, `—` пропущено, `!` ошибка.
+
+## Обратная связь
+
+- Ошибка, зависание, «поставилось не то» → [Issues](https://github.com/W34K3N/OneClick/issues):
+  приложите лог из `Bundle\logs\` и строку из журнала (`+`, `=`, `—`, `!`).
+- Вопрос, идея, «а будет ли работать с …» → [Discussions](https://github.com/W34K3N/OneClick/discussions).
