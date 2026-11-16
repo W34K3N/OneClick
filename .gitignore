@@ -1,0 +1,24 @@
+# Сборка / выходные файлы
+bin/
+obj/
+*.exe
+*.pdb
+*.ilk
+!docs/*.exe
+
+# Секреты и личные данные — НЕ публиковать
+*.pfx
+manifest.mypc.json
+Bundle/
+
+# Логи и временные
+*.log
+logs/
+*.tmp
+*.bak
+*.bak-*
+
+# Системный мусор
+Thumbs.db
+desktop.ini
+.DS_Store
