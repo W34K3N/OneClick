@@ -1,4 +1,4 @@
-﻿![OneClick](docs/banner.png)
+![OneClick](docs/banner.png)
 
 <p align="center">
   <a href="https://github.com/W34K3N/OneClick/releases/latest"><img alt="version" src="https://img.shields.io/badge/version-1.0-6C5CE7"></a>
